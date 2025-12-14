@@ -16,7 +16,7 @@ class productSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=productModel
-        fields=["id","title","price","image","category","extra_images","upload_images"]
+        fields=["id","title","price_in","image","category","extra_images","upload_images"]
     
     def create(self,validate):
         upload_images = validate.pop("upload_images")

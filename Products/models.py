@@ -11,7 +11,7 @@ class categoryModel(models.Model):
 class productModel(models.Model):
     id=models.IntegerField(primary_key=True,auto_created=True)
     title=models.CharField(max_length=50,default="New product")
-    price=models.IntegerField()
+    price_in=models.IntegerField()
     category=models.ForeignKey(categoryModel,on_delete=models.CASCADE,default="Null")
     image=models.ImageField(upload_to="product-images/",default="",null=True)
 
